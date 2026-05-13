@@ -21,7 +21,7 @@ create table if not exists user_feedback (
   -- Metadata
   source            text          default 'feedback-page',
   wallet_address    text,                     -- optional, kalau user sudah connect wallet
-  is_displayed      boolean       not null default false,  -- admin toggle untuk testimoni
+  is_displayed      boolean       not null default true,   -- auto-approve for now (public testimonials)
 
   created_at        timestamptz   not null default now(),
   updated_at        timestamptz   not null default now()
